@@ -106,6 +106,8 @@ router.get('/product/new', isAuthenticatedUser, async (req, res) => {
             }
 
             res.render('./admin/newproduct', {productData : productData})
+            console.log('1: '+productData.title)
+            console.log('1: '+productData.price)
             browser.close()
         }
         else {
@@ -116,6 +118,8 @@ router.get('/product/new', isAuthenticatedUser, async (req, res) => {
                 productUrl : ""
             }
             res.render('./admin/newproduct', {productData : productData})
+            console.log('2: '+productData.title)
+            console.log('2: '+productData.price)
         }
     } catch (error) {
         req.flash('error', 'ERROR: ' + error)
