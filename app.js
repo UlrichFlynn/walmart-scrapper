@@ -49,7 +49,7 @@ app.use(methodOverride('_method'))
 //middleware for flash messages
 app.use(flash())
 
-//setting middleware globally
+//setting  middleware globally
 app.use((req, res, next) => {
     res.locals.success_msg = req.flash(('success_msg'))
     res.locals.error_msg = req.flash(('error_msg'))
