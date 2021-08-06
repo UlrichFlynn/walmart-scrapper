@@ -1,0 +1,34 @@
+<%- include('../partials/header') -%>
+
+
+<div class="col-9">
+    <div class="container p-3 w-100">
+
+        <h1 class="mt-5 mb-4">Search Product</h1>
+        <%- include('../partials/messages') -%>
+
+        <form action="/product/search" id="newpostform" method="GET" class="mt-2">
+        
+            <div class="row mt-5 justify-content-center d-flex">
+                <div class="col-6">
+                    <input type="text" class="form-control" name="sku" placeholder="Enter Product SKU">
+                </div>
+            </div>
+
+            <div class="justify-content-center d-flex mt-4">
+                <button class="btn btn-danger w-25 py-2" id="fetchBtn">Search Product</button>
+            </div>
+
+        </form>
+
+        <div class="ml-5 text-left mt-5">
+            <b><span>Title: </span></b> <span><%= productData.title %></span><br>
+            <b><span>Price: </span></b> <span><%= productData.newprice %></span><br>
+            <b><span>Stock: </span></b> <span><%= productData.newstock %></span><br>
+            <b><span>SKU: </span></b> <span><%= productData.sku %></span><br>
+        </div>
+    </div>
+</div>
+
+
+<%- include('../partials/footer') -%>

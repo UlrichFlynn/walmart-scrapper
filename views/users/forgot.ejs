@@ -1,0 +1,22 @@
+<%- include('../partials/header') -%>
+
+
+    <h1 class="text-center mt-5 mb-3">Forgot Password</h1>
+    <div class="container w-25">
+        <%- include('../partials/messages') -%>
+
+        <form action="/forgot" method="POST">
+        
+            <div class="form-group px-0">
+                <input type="email" name="email" class="form-control" placeholder="Enter Email Address">
+            </div>
+            <button class="btn btn-danger btn-block" type="submit">Send Email</button>
+
+        </form>
+
+        <a href="/login" class="float-right mt-2">Back to Login</a>
+
+    </div>
+
+
+<%- include('../partials/footer') -%>
