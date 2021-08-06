@@ -26,9 +26,9 @@ async function scrapeData(url, page) {
         const html = await page.evaluate(() => document.body.innerHTML)
         const $ = await cheerio.load(html)
 
-        let title = $("h1").textContent
-        let p = $(".price-characteristic").textContent
-        let c = $(".price-mantissa").textContent
+        let title = $("h1").textContent()
+        let p = $(".price-characteristic").textContent()
+        let c = $(".price-mantissa").textContent()
         let price = p+'.'+c
 
         if(!price) {
